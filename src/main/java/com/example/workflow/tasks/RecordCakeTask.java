@@ -15,8 +15,11 @@ public class RecordCakeTask implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         Map<String,Object> cakeDecision = (Map<String, Object>) delegateExecution.getVariable("cakeDecision");
+        //Map<String,Object> beverageDecision = (Map<String, Object>) delegateExecution.getVariable("beverageDecision");
+
         log.info("Based on your selected color {} suggested cake is {}",
                 delegateExecution.getVariable("favoriteColor"),
                 cakeDecision.get("suggestedCake"));
+
     }
 }

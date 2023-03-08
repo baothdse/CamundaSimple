@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0frxzll" name="Suggest a beverage based on suggested beverage" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="decideOnCake" name="Suggest a beverage based on suggested beverage">
+    <decisionTable id="DecisionTable_0nna1sh" hitPolicy="FIRST">
+      <input id="Input_1" label="Suggested Cake">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>suggestedCake</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Suggested Beverage" name="suggestedBeverage" typeRef="string" />
+      <rule id="DecisionRule_1ho17po">
+        <inputEntry id="UnaryTests_0pv2j6q">
+          <text>"chocolate"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hoj51i">
+          <text>"water"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_168hoic">
+        <inputEntry id="UnaryTests_1nq8j2a">
+          <text>"red velvet"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bs71nd">
+          <text>"coke"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e1tmr9">
+        <inputEntry id="UnaryTests_1u8tzf4">
+          <text>"macarons"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pk35gn">
+          <text>"pepsi"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kll9tx">
+        <description>"I don`t known which a good beverage for that cake 😱"</description>
+        <inputEntry id="UnaryTests_14hghbd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1scjm08">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r3k8xd">
+        <inputEntry id="UnaryTests_05mju0s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pilmvk">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decideOnCake">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

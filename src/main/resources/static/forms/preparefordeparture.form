@@ -19,7 +19,7 @@
       "description": "Country you are going to",
       "validate": {
         "required": true,
-        "pattern": "America|France"
+        "pattern": "America|France|England"
       }
     }
   ],

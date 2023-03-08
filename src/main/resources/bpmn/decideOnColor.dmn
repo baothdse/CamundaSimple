@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_08ph0zp" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
-  <decision id="decideOnColor" name="Suggest a cage based on favorite color">
-    <extensionElements>
-      <biodi:bounds x="144" y="131" width="180" height="80" />
-    </extensionElements>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_08ph0zp" name="definitions" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0">
+  <decision id="decideOnColor" name="Suggest a cake based on favorite color">
     <decisionTable id="decisionTable" hitPolicy="FIRST">
       <input id="input1" label="Favorite color" camunda:inputVariable="">
         <inputExpression id="inputExpression1" typeRef="string">
@@ -75,4 +72,11 @@
       </rule>
     </decisionTable>
   </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_0fu4bv4">
+      <dmndi:DMNShape id="DMNShape_06ip0tt" dmnElementRef="decideOnColor">
+        <dc:Bounds height="80" width="180" x="144" y="81" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
 </definitions>

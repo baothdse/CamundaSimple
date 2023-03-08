@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1dz7nyn" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="decideStation" name="Select Station based on Transportation">
+    <decisionTable id="DecisionTable_1rhf6t3">
+      <input id="Input_1" label="Transportation">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>transportation</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Station" name="station" typeRef="string" />
+      <rule id="DecisionRule_1y1adi4">
+        <inputEntry id="UnaryTests_1pmvot3">
+          <text>"Airplane"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gk7n85">
+          <text>"Airport"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01yj13c">
+        <inputEntry id="UnaryTests_14p2pm6">
+          <text>"Train"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qohij1">
+          <text>"Rail Station"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zmsusr">
+        <inputEntry id="UnaryTests_1iapl8y">
+          <text>"Boat"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_100ehdv">
+          <text>"Dock"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05hwf3j">
+        <inputEntry id="UnaryTests_16nnpmr">
+          <text>"Car"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jpcfva">
+          <text>"Car Station"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decideStation">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
